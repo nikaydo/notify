@@ -11,10 +11,9 @@ CREATE TABLE users (
 CREATE TABLE events (
     uuid UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     title TEXT NOT NULL,
-    Description TEXT NOT NULL,
-    MaxMembers INT NOT NULL,
-    CurrectMembers INT NOT NULL,
-    Members INT NOT NULL
+    Description TEXT DEFAULT '',
+    MaxMembers INT DEFAULT 1,
+    CountMembers INT DEFAULT 0
 );
 -- +goose StatementEnd
 

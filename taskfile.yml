@@ -16,3 +16,7 @@ tasks:
     desc: "Сделать миграцию"
     cmds:
       - goose -dir migrations postgres "postgres://event:password@localhost:5432/eventbd?sslmode=disable" up
+  migr_down:
+    desc: "Сделать миграцию"
+    cmds:
+      - goose -dir migrations postgres "postgres://event:password@localhost:5432/eventbd?sslmode=disable" down
